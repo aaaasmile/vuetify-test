@@ -4,13 +4,19 @@ export const app = new Vue({
     data: {
     },
     template: `
-    <v-app>
+    <v-app><v-content>
         <div class="home">
             <h2>Testing Vuetify</h2>
-            <p class="red">Lorem</p>
-            <p class="headline">this is a headline</p>
+            <v-btn>Click Me</v-btn>
+            <v-btn color="pink">Rosa</v-btn>
+            <v-btn class="pink white--text">
+                <v-icon left small>email</v-icon>
+            </v-btn>
+            <v-btn fab dark small depressed color="purple">
+                <v-icon dark>favorite</v-icon>
+            </v-btn>
         </div>
-    </v-app>
+    </v-content></v-app>
     `
 })
 
