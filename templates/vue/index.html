@@ -30,8 +30,10 @@
 
 <body>
   <div id="app"></div>
-  <p>Buildnr: {{.Buildnr}}</p>
 </body>
+<script>
+  window.buildnr = "{{.Buildnr}}"
+</script>
 <script type="module">
   import { app } from './static/js/vue/main.js'
 </script>

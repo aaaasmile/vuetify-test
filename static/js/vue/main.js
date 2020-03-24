@@ -2,6 +2,11 @@ export const app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
+        Buildnr: "0.1"
+    },
+    created: function () {
+        // `this` points to the vm instance
+        this.Buildnr = window.buildnr
     },
     template: `
     <v-app><v-content>
@@ -16,8 +21,9 @@ export const app = new Vue({
                 <v-icon dark>favorite</v-icon>
             </v-btn>
         </div>
+        <p>Buildnr: {{Buildnr}}</p>
     </v-content></v-app>
     `
 })
 
-console.log('Main is here!')
+console.log('Main is here!', window.buildnr)
