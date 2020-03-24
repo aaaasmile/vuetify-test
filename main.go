@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aaaasmile/live-blog/web/idl"
 	"github.com/aaaasmile/vuetify-test/web"
+	"github.com/aaaasmile/vuetify-test/web/idl"
 )
 
 func main() {
