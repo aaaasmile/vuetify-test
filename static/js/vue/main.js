@@ -4,7 +4,7 @@ export const app = new Vue({
     data: {
         Buildnr: "0.1"
     },
-    created: function () {
+    mounted: function () {
         // `this` points to the vm instance
         this.Buildnr = window.buildnr
     },
