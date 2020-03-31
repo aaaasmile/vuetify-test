@@ -1,8 +1,23 @@
+import Login from './login/login.js'
+
+const routes = [
+  { path: '/login', component: Login }
+]
+
+// 3. Create the router instance and pass the `routes` option
+// You can pass in additional options here, but let's
+// keep it simple for now.
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
+
 export const app = new Vue({
     el: '#app',
+    router,
     vuetify: new Vuetify(),
-    data: {
-        Buildnr: "0.1"
+    data() {
+      return{
+      }
     },
     mounted: function () {
         // `this` points to the vm instance
@@ -10,20 +25,15 @@ export const app = new Vue({
     },
     template: `
   <v-app>
-   <v-content>
-      <div class="home">
-        <h2>Testing</h2>
-        <v-btn color="pink">Rosa o bella</v-btn>
-        <v-btn>Cliccami</v-btn>
-        <v-btn class="pink white--text">
-          <v-icon left small>email</v-icon>
-        </v-btn>
-        <v-btn fab dark small depressed color="purple">
-          <v-icon dark>favorite</v-icon>
-        </v-btn>
-      </div>
-      <p>Buildnr: {{Buildnr}}</p>
-    </v-content> 
+    <v-toolbar>
+      <v-toolbar-title>
+        <v-btn >Test app</v-btn>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <router-link to="/login">Navigate to Login</router-link>
+      <v-toolbar-items class="hidden-sm-and-down"></v-toolbar-items>
+    </v-toolbar>
+    <router-view></router-view>
   </v-app>`
 })
 
