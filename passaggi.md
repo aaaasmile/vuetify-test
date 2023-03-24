@@ -37,3 +37,13 @@ con 'Vue Template in Js' come nella versione 2.
 Per lo store avevo usato in precedenza vuex che ora però non viene più sviluppato.
 Per le nuove app viene consigliato Pinia: https://pinia.vuejs.org/ e https://github.com/vuejs/pinia
 Pinia ha la dipendenza di VueDemi che ho incluso globalmente.
+
+## Icons
+Per le icons meglio usare il cdn che contiene la lista completa di tutte le icon mdi.
+Il cdn è:   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+Poi se vai a vedere l'elenco di tutte le icon su: https://pictogrammers.com/library/mdi/
+qui trovi che ogni icon è espressa come per esempio mdiAbjadHebrew. In Vuetify Template
+si usa, invece, la forma mdi-abjad-hebrew dove ogni lettera maiuscola diventa un dash.
+Il nome con i dash si trova poi nel tab webfont. Se un'icona non è disponibile, probabilmente
+è perché è stata aggiunta dopo la versione 5 che è quella che ho incluso nel cdn.
