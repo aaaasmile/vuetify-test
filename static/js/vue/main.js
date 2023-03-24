@@ -10,7 +10,12 @@ const router = VueRouter.createRouter({
   routes,
 })
 
-const vuetify = Vuetify.createVuetify()
+const vuetify = Vuetify.createVuetify({
+  theme: {
+    defaultTheme: 'dark'
+  }
+})
+
 const pinia = Pinia.createPinia()
 
 export const app = Vue.createApp({
