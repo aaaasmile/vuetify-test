@@ -1,13 +1,13 @@
-export default  Vue.component('button-counter', {
-  data: function () {
+export default {
+  data() {
     return {
       count: 0
     }
   },
-  mounted(){
+  mounted() {
     console.log("Login component mounted.")
   },
   template: `
   <button v-on:click="count++">You clicked me {{ count }} times.</button>
 `
-})
+}

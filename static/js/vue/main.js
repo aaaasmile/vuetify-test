@@ -1,29 +1,29 @@
 import Login from './login/login.js'
+//import createVuetify from 'vuetify'
+//import VueRouter from 'vuerouter'
 
 const routes = [
   { path: '/login', component: Login }
 ]
 
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
-const router = new VueRouter({
-  routes // short for `routes: routes`
+const router = VueRouter.createRouter({
+  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+  history: VueRouter.createWebHashHistory(),
+  routes, // short for `routes: routes`
 })
 
-export const app = new Vue({
-    el: '#app',
-    router,
-    vuetify: new Vuetify(),
-    data() {
-      return{
-      }
-    },
-    mounted: function () {
-        // `this` points to the vm instance
-        this.Buildnr = window.buildnr
-    },
-    template: `
+//const vuetify = createVuetify()
+
+export const app = Vue.createApp({
+  data() {
+    return {
+    }
+  },
+  mounted: function () {
+    // `this` points to the vm instance
+    this.Buildnr = window.buildnr
+  },
+  template: `
   <v-app>
     <v-toolbar>
       <v-toolbar-title>
@@ -34,7 +34,11 @@ export const app = new Vue({
       <v-toolbar-items class="hidden-sm-and-down"></v-toolbar-items>
     </v-toolbar>
     <router-view></router-view>
-  </v-app>`
+  </v-app>
+`
 })
 
+//app.use(vuetify)
+app.use(router)
+app.mount('#app')
 console.log('Main is here!', window.buildnr)
