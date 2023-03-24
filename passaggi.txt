@@ -1,5 +1,0 @@
-Progetto per testare vuetify
-Ho cercato di creare una repository con tutte le risorse locali scaricando tutti i fari fonts e css.
-
-Per inizializzare i moduli si usa:
-go mod init github.com/aaaasmile/vuetify-test
